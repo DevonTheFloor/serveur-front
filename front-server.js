@@ -4,7 +4,7 @@ const https = require('https');
 const fs = require('fs');
 
 //SERVEUR 80
-app.set('port', process.env.HTTP_FRONT_PORT);
+//router.set('port', process.env.HTTP_FRONT_PORT);
 const server = http.createServer(function (req, res) {
   res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
   res.end();
@@ -12,7 +12,7 @@ const server = http.createServer(function (req, res) {
 server.listen(process.env.HTTP_FRONT_PORT);
 
 //SERVEUR SSL
-app.set('port', process.env.HTTPS_FRONT_PORT);
+routeur.set('port', process.env.HTTPS_FRONT_PORT);
 const options = {
     key: fs.readFileSync(process.env.KEY_SSL),
     cert: fs.readFileSync(process.env.CERT_SSL)
