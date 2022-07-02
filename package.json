@@ -16,7 +16,9 @@
   "license": "ISC",
   "dependencies": {
     "fs": "0.0.1-security",
+    "helmet": "^5.1.0",
     "http": "0.0.1-security",
-    "https": "^1.0.0"
+    "https": "^1.0.0",
+    "nodemon": "^2.0.18"
   }
 }

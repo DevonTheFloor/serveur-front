@@ -14,8 +14,8 @@ server.listen(process.env.HTTP_FRONT_PORT);
 //SERVEUR SSL
 routeur.set('port', process.env.HTTPS_FRONT_PORT);
 const options = {
-    key: fs.readFileSync(process.env.KEY_SSL),
-    cert: fs.readFileSync(process.env.CERT_SSL)
+    key: fs.readFileSync('../cert-ssl/key.pem'),
+    cert: fs.readFileSync('../cert-ssl/cert.pem')
   };
 const secu_serve = https.createServer(options, routeur);
 console.log(`Connecté au port SSL: ${process.env.HTTPS_FRONT_PORT}`);
